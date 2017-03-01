@@ -1,0 +1,120 @@
+/*require(./com/animate.min.css);
+require(./com/swiper-3.3.1.min.css);*/
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.swiper-container{
+    width:100%;
+    height:100%;
+}
+.swiper-wrapper{
+    height:100%;
+    width:100%;
+}
+.one{
+    /*background:url(../img/2.png) no-repeat;*/
+    background-size:100% 100%;
+    position: relative;
+}
+.one_img{
+    width:7rem;
+    position:absolute;
+    left:27%;
+    top:4rem;
+}
+.one_img img{
+    width:100%;
+    display:block;
+}
+.ong_img2{
+    width:8rem;
+    position:absolute;
+    left:10%;
+    top:15%;
+    z-index:1;
+}
+.ong_img2 img{
+    width:30rem;
+    display:block;
+    width: 100%;
+    position: absolute;
+    top: 10.5rem;
+}
+.audio{
+    width:1.33rem;
+    position:fixed;
+    top:4%;
+    right:4%;
+    z-index:10;
+    -webkit-animation: music 5s linear infinite;
+}
+.swiper-slide {
+	background-color: black;
+}
+@-webkit-keyframes music {
+    from { transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+@-moz-keyframes music {
+    from { transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+@-ms-keyframes music {
+    from { transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+@-o-keyframes music {
+    from { transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+@keyframes music {
+    from { transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+.audio img{
+    width:100%;
+}
+.ong_img3 img{
+	width: 10rem;
+}
+/*@font-face {
+	font-family:Amaranth-BoldItalic;
+	src: url(Amaranth-BoldItalic.otf);
+}*/
+.wz{
+	font-family: "微软雅黑";
+	color: white;
+	z-index: 10;
+	font-size: 1.5rem;
+	margin: -2.5rem 0 0 1.7rem;
+}
+.wzs{
+	width: 2.2rem;
+	height: 5rem;
+	float: left;
+	color: white;
+	font-size: 2.1rem;
+	z-index: 10;
+	font-size: 2.1rem;
+	margin: -17rem 0 0 0.5rem;
+}
+.ong_img4 img{
+	width: 10.5rem;
+	height: 1.5rem;
+}
+.two{
+	color: white;
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 0.5rem 0 0 0 ;
+	text-decoration: underline;
+}
+.two-big{
+	width: 8rem;
+	height: 12.5rem;
+	border: 5px solid white;
+	margin: 1rem;
+	
+}

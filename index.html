@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+     <link rel="stylesheet" href="css/animate.min.css">
+    <div class="audio">
+          <img id="img" src="img/audio1.png" alt="" />
+          <audio src="music/mp3.mp3" autoplay="autoplay" loop="loop"></audio>
+      </div>
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide one">
+                <div class="one_img ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="3s" swiper-animate-delay="1s"><img src="img/xf.jpg" alt="" /></div>
+               
+                <div class="ong_img3 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"><img src="img/z.gif" alt="" /></div>
+                <div class="ong_img4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"><img src="img/huo.gif" alt="" /></div>
+               <p class="wzs ani" swiper-animate-effect="fadeInUp" bounceInLeft swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">人民的守护神</p> 
+               <p class="wz ani" swiper-animate-effect="flip" bounceInLeft swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >北京--消防</p>
+
+            </div>
+            <div class="swiper-slide">
+            	
+			<div class="two ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.9s" swiper-animate-delay="0.4s">我们的风采</div>
+			
+			<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+				<div class="two-big">
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+						<div class="imgss">
+							<img src="img/psb (10).jpg"style="transform: rotate(-30deg); filter: blur(20px) ;"/>
+						     <div class="ani" swiper-animate-effect="rubberBandg" swiper-animate-duration="0.5s" swiper-animate-delay="3s">
+						     <img src="img/psb (12).jpg"style="margin: 0.02rem 0 0  0;"/>
+						     </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            </div>
+            
+            <div class="swiper-slide">
+				<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容</p>
+			</div>
+           
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+
+</head>
+<body>
+  <script src="js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>   
+  <script type="text/javascript" src="swiper/swiper.animate1.0.2.min.js"></script>
+  <script src="swiper/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="swiper/swiper-3.3.1.jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  
+  <script type="text/javascript">
+  	
+ 
+   var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical',
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+          swiperAnimateCache(swiper); //隐藏动画元素 
+          swiperAnimate(swiper); //初始化完成开始动画
+        }, 
+        onSlideChangeEnd: function(swiper){ 
+          swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        } 
+    })   
+
+
+    $(".audio").click(function(){
+        //animationPlayState   
+        if($(".audio").css("animationPlayState") == "running"){
+            $(this).css('animationPlayState', 'paused');
+            $("#img").attr("src","img/audio2.png")
+            $("audio")[0].pause();
+        }else{
+            $(this).css('animationPlayState', 'running');
+            $("#img").attr("src","img/audio1.png")
+            $("audio")[0].play();
+        }
+    })  
+   </script>
+</body>
+</html>
